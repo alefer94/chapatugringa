@@ -241,7 +241,7 @@ export default function CompraTicketsPage() {
                     onChange={handleChange}
                     maxLength={8}
                     placeholder="Ingresa tu documento de identidad"
-                    className="w-full bg-slate-800/40 border border-slate-700/50 rounded-xl px-5 py-4 text-slate-100 focus:ring-2 focus:ring-primary outline-none"
+                    className="w-full bg-white border border-slate-700/50 rounded-xl px-5 py-4 text-slate-900 focus:ring-2 focus:ring-primary outline-none"
                   />
 
                   {errors.dni && (
@@ -260,7 +260,7 @@ export default function CompraTicketsPage() {
                     value={form.nombres}
                     onChange={handleChange}
                     placeholder="Tus nombres completos"
-                    className="w-full bg-slate-800/40 border border-slate-700/50 rounded-xl px-5 py-4 text-slate-100 focus:ring-2 focus:ring-primary outline-none"
+                    className="w-full bg-white border border-slate-700/50 rounded-xl px-5 py-4 text-slate-900 focus:ring-2 focus:ring-primary outline-none"
                   />
 
                   {errors.nombres && (
@@ -281,7 +281,7 @@ export default function CompraTicketsPage() {
                     value={form.apellidos}
                     onChange={handleChange}
                     placeholder="Tus apellidos"
-                    className="w-full bg-slate-800/40 border border-slate-700/50 rounded-xl px-5 py-4 text-slate-100 focus:ring-2 focus:ring-primary outline-none"
+                    className="w-full bg-white border border-slate-700/50 rounded-xl px-5 py-4 text-slate-900 focus:ring-2 focus:ring-primary outline-none"
                   />
 
                   {errors.apellidos && (
@@ -298,10 +298,6 @@ export default function CompraTicketsPage() {
                   </label>
 
                   <div className="flex">
-                    <span className="inline-flex items-center px-4 rounded-l-xl border border-r-0 border-primary/20 bg-slate-800 text-slate-400 text-sm font-bold">
-                      +51
-                    </span>
-
                     <input
                       name="whatsapp"
                       value={form.whatsapp}
@@ -309,7 +305,7 @@ export default function CompraTicketsPage() {
                       maxLength={9}
                       placeholder="987654321"
                       type="tel"
-                      className="w-full bg-slate-800/40 border border-slate-700/50 rounded-r-xl px-5 py-4 text-slate-100 focus:ring-2 focus:ring-primary outline-none"
+                      className="w-full bg-white border border-slate-700/50 rounded-xl px-5 py-4 text-slate-900 focus:ring-2 focus:ring-primary outline-none"
                     />
                   </div>
 
@@ -330,7 +326,8 @@ export default function CompraTicketsPage() {
                     name="departamento"
                     value={form.departamento}
                     onChange={handleChange}
-                    className="w-full bg-slate-800/40 border border-slate-700/50 rounded-xl px-5 py-4 text-slate-100 focus:ring-2 focus:ring-primary outline-none"
+                    className="w-full bg-white border border-
+                    slate-700/50 rounded-xl px-5 py-4 text-slate-900 focus:ring-2 focus:ring-primary outline-none"
                   >
                     <option value="">Selecciona tu ubicación</option>
                     <option>Lima</option>
@@ -386,7 +383,7 @@ export default function CompraTicketsPage() {
                   <button
                     type="submit"
                     disabled={isLoading}
-                    className="w-full py-5 bg-primary hover:bg-primary-dark font-black text-xl rounded-xl transition-all transform hover:scale-[1.01] shadow-xl bg-gradient-to-r from-primary to-primary-dark text-black shadow-primary/40 active:scale-95 disabled:opacity-70"
+                    className="w-full py-5 px-10 bg-black hover:bg-black/90 font-black text-xl rounded-xl transition-all transform hover:scale-[1.01] shadow-xl from-black to-black/90 text-white shadow-black/40 active:scale-95 disabled:opacity-70"
                   >
                     {isLoading ? "VALIDANDO..." : "SUBIR COMPROBANTE"}
                   </button>
@@ -401,7 +398,7 @@ export default function CompraTicketsPage() {
 
             <div className="relative z-10 flex flex-col items-center text-center">
               {/* Botón Superior Informativo */}
-              <div className="bg-primary/40 p-4 rounded-lg text-center bg-primary/5 text-white px-6 py-2 rounded-full font-bold text-sm md:text-base mb-2 shadow-lg animate-pulse">
+              <div className="bg-primary/90 text-white p-4 rounded-lg text-center px-6 py-2 font-bold text-sm md:text-base mb-2 shadow-lg animate-pulse">
                 ¡Si aún no has realizado tu pago hazlo ahora!
               </div>
 
@@ -443,14 +440,17 @@ export default function CompraTicketsPage() {
                     {/* Reemplaza con tu QR real */}
                     <div className="w-48 h-48 bg-slate-200 rounded-lg flex items-center justify-center text-slate-400 border-2 border-dashed border-slate-300">
                       {/* [QR YAPE] */}
-                      <img
-                        src="https://images.squarespace-cdn.com/content/v1/5d3f241fa4e0350001fa20d5/1636491460338-AIZAXV2978MGIDQE0GT7/qr-code.png?format=2500w"
-                        alt=""
+                      <Image
+                        src="https://images.squarespace-cdn.com/content/v1/5d3f241fa4e0350001fa20d5/1636491460338-AIZAXV2978MGIDQE0GT7/qr-code.png"
+                        alt="Código QR"
+                        width={250} // ancho deseado
+                        height={250} // alto deseado
+                        priority={true} // opcional: carga inmediata para LCP
                       />
                     </div>
                   </div>
                   <p className="text-white font-bold text-sm">
-                    Agarra tu gringa E & L S.a.c
+                    Agarra tu gringa
                   </p>
                   {/* <p className="text-primary font-black text-lg"># 999 x99 x99</p> */}
                 </div>
@@ -464,14 +464,17 @@ export default function CompraTicketsPage() {
                     {/* Reemplaza con tu QR real */}
                     <div className="w-48 h-48 bg-slate-200 rounded-lg flex items-center justify-center text-slate-400 border-2 border-dashed border-slate-300">
                       {/* [QR PLIN] */}
-                      <img
-                        src="https://images.squarespace-cdn.com/content/v1/5d3f241fa4e0350001fa20d5/1636491460338-AIZAXV2978MGIDQE0GT7/qr-code.png?format=2500w"
-                        alt=""
+                      <Image
+                        src="https://images.squarespace-cdn.com/content/v1/5d3f241fa4e0350001fa20d5/1636491460338-AIZAXV2978MGIDQE0GT7/qr-code.png"
+                        alt="Código QR"
+                        width={250} // ancho deseado
+                        height={250} // alto deseado
+                        priority={true} // opcional: carga inmediata para LCP
                       />
                     </div>
                   </div>
                   <p className="text-white font-bold text-sm">
-                    Agarra tu gringa E & L S.a.c
+                    Agarra tu gringa
                   </p>
                   {/* <p className="text-slate-300 font-bold text-xs mt-1">(SOLO CON QR)</p> */}
                 </div>
@@ -540,8 +543,8 @@ export default function CompraTicketsPage() {
           </div>
         </div>
       </div>
-      <footer className="glass-panel rounded-3xl p-8 border-t-4 border-t-primary border-t-primary shadow-2xl shadow-primary/10">
-        <div className="text-center text-slate-600 text-xs">
+      <footer className="glass-panel rounded-3xl p-8 border-t-4 border-t-primary shadow-2xl shadow-primary/10">
+        <div className="text-center text-slate-300 text-xs">
           © 2026 Agarra Tu Gringa - Todos los derechos reservados. El sorteo es
           regulado por las leyes locales vigentes.
         </div>
