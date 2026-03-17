@@ -9,7 +9,6 @@
   --color-primary-dark: #05662e;
   --color-primary-light: #9ec41e;
 
-  --color-background-light: #f6f8f6;
   --color-background-dark: #0a1f0a;
 
   --radius-DEFAULT: 0.5rem;
@@ -18,15 +17,19 @@
 }
 
 :root {
-  --background: #f6f8f6;
-  --foreground: #0f172a;
-}
+  --background: #0a1f0a;
+  --foreground: #f1f5f9;
+  --font-display: "Lexend", sans-serif;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a1f0a;
-    --foreground: #f1f5f9;
-  }
+  --color-primary: #45ac35;
+  --color-primary-dark: #05662e;
+  --color-primary-light: #9ec41e;
+
+  --color-background-dark: #0a1f0a;
+
+  --radius-DEFAULT: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
 }
 
 body {

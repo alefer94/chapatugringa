@@ -5,6 +5,21 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
+        hostname: 'www.diariomotor.com',
+        pathname: '**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'aparta.pe',
+        pathname: '**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.squarespace-cdn.com',
+        pathname: '**',
+      },
+      {
+        protocol: 'https',
         hostname: 'lh3.googleusercontent.com',
         pathname: '**',
       },
