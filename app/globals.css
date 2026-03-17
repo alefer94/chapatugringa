@@ -4,11 +4,11 @@
 
 @theme {
   --font-display: "Lexend", sans-serif;
-  
+
   --color-primary: #45ac35;
   --color-primary-dark: #05662e;
   --color-primary-light: #9ec41e;
-  
+
   --color-background-light: #f6f8f6;
   --color-background-dark: #0a1f0a;
 
@@ -58,4 +58,10 @@ body {
   -webkit-font-feature-settings: 'liga';
   font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased;
+}
+
+.glass-panel {
+  background: rgba(21, 30, 20, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(69, 172, 53, 0.2);
 }
