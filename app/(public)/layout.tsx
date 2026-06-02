@@ -20,22 +20,11 @@ export default function PublicLayout({
       {/* Barra de navegacion publica */}
       <header className="sticky top-0 z-40 bg-black/20 backdrop-blur-xl border-b border-white/10 shadow-[0_1px_0_0_oklch(44%_0.14_165/0.4)]">
         <div className="flex justify-between items-center w-full px-4 md:px-margin-desktop max-w-7xl mx-auto h-16 md:h-20">
-          {/* Logo */}
-          <Link href="/">
-            <Image
-              src="/agarra_tu_gringa.png"
-              alt="Agarra tu gringa"
-              width={80}
-              height={80}
-              className="w-auto h-12 md:h-16 drop-shadow-[0_0_12px_oklch(90%_0.21_105/0.4)]"
-            />
-          </Link>
-
-          {/* Nav + hamburger (NavMenu handles both) */}
+          {/* Nav, Logo + Links (NavMenu handles all) */}
           <NavMenu />
 
           {/* Tickets button — desktop only */}
-          <Link href="/tickets" className="hidden md:block">
+          <Link href="/tickets" className="hidden md:block shrink-0 ml-4">
             <button className="relative overflow-hidden bg-gradient-to-r from-secondary via-accent to-secondary bg-[length:200%_100%] hover:bg-right text-on-secondary px-6 py-2 rounded-full font-black tracking-wide transition-all duration-500 active:scale-95 shadow-[0_0_20px_oklch(90%_0.21_105/0.35)] hover:shadow-[0_0_30px_oklch(90%_0.21_105/0.6)]">
               Ver mis tickets
             </button>

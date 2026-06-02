@@ -5,7 +5,18 @@ import { Gift, Ticket } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="flex flex-col w-full">
+    <div className="flex flex-col w-full relative overflow-hidden z-0">
+      {/* ── Background Blobs (Aurora Effect) ── */}
+      <div className="absolute inset-0 -z-10 pointer-events-none overflow-hidden select-none">
+        {/* Blob 1: Bright Emerald Green */}
+        <div className="absolute top-[15%] left-[-15%] w-[350px] md:w-[600px] h-[350px] md:h-[600px] rounded-full bg-emerald-400/25 blur-[80px] md:blur-[120px] animate-float-blob-1" />
+        
+        {/* Blob 2: Electric Yellow */}
+        <div className="absolute top-[40%] right-[-15%] w-[300px] md:w-[500px] h-[300px] md:h-[500px] rounded-full bg-secondary/30 blur-[80px] md:blur-[120px] animate-float-blob-2" />
+        
+        {/* Blob 3: Neon Cyan / Teal */}
+        <div className="absolute bottom-[15%] left-[5%] w-[400px] md:w-[700px] h-[400px] md:h-[700px] rounded-full bg-cyan-500/20 blur-[90px] md:blur-[130px] animate-float-blob-3" />
+      </div>
 
       {/* ── Hero Banner ── */}
       <div className="w-full relative mb-4">
